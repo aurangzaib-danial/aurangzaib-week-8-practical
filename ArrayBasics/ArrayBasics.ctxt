@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=ArrayBasics
+comment0.text=\n\ Week\ 8\ Practical\ 10\n\n\ @author\ Aurangzaib\ Danial\ Liaqat\ Khan\n\ @version\ 12/03/2021\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=array
+comment2.target=void\ list(int[])
+comment3.params=array
+comment3.target=void\ listBackwards(int[])
+comment4.params=array
+comment4.target=int\ sum(int[])
+comment5.params=length\ min\ max
+comment5.target=int[]\ randomArray(int,\ int,\ int)
+comment6.params=array
+comment6.target=int\ product(int[])
+comment7.params=array
+comment7.target=int\ minimum(int[])
+comment8.params=array\ target
+comment8.target=int\ find(int[],\ int)
+numComments=9
