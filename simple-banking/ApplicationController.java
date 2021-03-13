@@ -12,11 +12,6 @@ public class ApplicationController
 {
     public CustomerAccount customer = new CustomerAccount();
     public Scanner scan = new Scanner(System.in);
-    
-    public static void main(String[] args) {
-        NumberedBankMenuController controllerInstance = new NumberedBankMenuController();
-        controllerInstance.call();
-    }
 
     public void call() {
         welcome();

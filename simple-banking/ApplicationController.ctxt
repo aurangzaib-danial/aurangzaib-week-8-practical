@@ -2,7 +2,6 @@
 comment0.target=ApplicationController
 comment1.params=
 comment1.target=void\ call()
-comment1.text=\n\ \ \ \ public\ static\ void\ main(String[]\ args)\ {\n\ \ \ \ \ \ \ \ NumberedBankMenuController\ controllerInstance\ \=\ new\ NumberedBankMenuController();\n\ \ \ \ \ \ \ \ controllerInstance.call();\n\ \ \ \ }\n
 comment10.params=message
 comment10.target=void\ printError(java.lang.String)
 comment11.params=arg
