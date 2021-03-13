@@ -8,7 +8,7 @@
 
 import java.util.Scanner;
 
-public class ApplicationController
+public abstract class ApplicationController
 {
     public CustomerAccount customer = new CustomerAccount();
     public Scanner scan = new Scanner(System.in);
