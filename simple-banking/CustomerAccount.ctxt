@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=CustomerAccount
+comment0.text=\n\ CustomerAccount\n\n\ @author\ Aurangzaib\ Danial\ Liaqat\ Khan\n\ @version\ 12/03/2021\n
+comment1.params=amount
+comment1.target=void\ deposit(int)
+comment2.params=amount
+comment2.target=boolean\ withdraw(int)
+comment3.params=
+comment3.target=int\ checkBalance()
+numComments=4
