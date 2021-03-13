@@ -10,14 +10,14 @@ import java.util.Scanner;
 
 public class ApplicationController
 {
-    private CustomerAccount customer = new CustomerAccount();
-    private Scanner scan = new Scanner(System.in);
-/**
+    public CustomerAccount customer = new CustomerAccount();
+    public Scanner scan = new Scanner(System.in);
+    
     public static void main(String[] args) {
         NumberedBankMenuController controllerInstance = new NumberedBankMenuController();
         controllerInstance.call();
     }
-**/
+
     public void call() {
         welcome();
         menu();
