@@ -41,16 +41,16 @@ public class ArrayBasics{
     }
 
     public static void list(int[] array) {
-        System.out.println("Listing array: ");
-        for (int number : array) {
-            System.out.println(number);
+        System.out.println("Listing array indices and values: ");
+        for (int index = 0; index < array.length; index++) {
+            System.out.println(index + ": " + array[index]);
         }
     }
 
     public static void listBackwards(int[] array) {
         System.out.println("Listing array in reversed order: ");
-        for (int counter = array.length - 1; counter >= 0; counter--) {
-            System.out.println(array[counter]);
+        for (int index = array.length - 1; index >= 0; index--) {
+            System.out.println(index + ": " + array[index]);
         }
     }
 
