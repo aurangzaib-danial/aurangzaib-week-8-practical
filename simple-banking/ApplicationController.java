@@ -1,4 +1,3 @@
-
 /**
  * ApplicationController
  *
@@ -32,45 +31,39 @@ public abstract class ApplicationController
     public void withdraw() {
         println("Please enter the amount you would like to withdraw");
 
-        String userInput = getInput();
-
-        if (!testIntegerInput(userInput)) return;
+        int userInput = getIntegerInput(); 
         
-        int convertedInput = Integer.parseInt(userInput);
-        
-        if (customer.withdraw(convertedInput)) {
+        if (customer.withdraw(userInput)) {
             println("\n Transaction successful, please take your cash \n");
         } else {
            printError("Failed! Either you do not have sufficient balance or you entered a negative number"); 
         }
     }
     
-    public boolean testIntegerInput(String input) {
-        if (isInteger(input)) {
-            return true;
-        } else {
-            printError("Please try again and use integers only.");
-            return false;
-        }
-    }
-
     public void deposit() {
         println("Please enter the amount you would like to deposit");
 
-        String userInput = getInput();
-
-        if (!testIntegerInput(userInput)) return;
+        int userInput = getIntegerInput(); 
         
-        int convertedInput = Integer.parseInt(userInput);
-        
-        if (convertedInput > 0) {
-            customer.deposit(convertedInput);
+        if (userInput > 0) {
+            customer.deposit(userInput);
             println("\n Successfully deposited. \n");
         } else {
-           printError("Please try again and enter an amount above zero"); 
+           printError("Your entered an amount less than zero!"); 
+           deposit();
         }
     }
-
+    
+    public int getIntegerInput() {
+        try{
+            int userInput = Integer.parseInt(getInput());
+            return userInput;
+        } catch (NumberFormatException e) {
+            printError("Please try again and use integers only.");
+            return getIntegerInput();
+        }
+    }
+    
     public void cancel() {
         goodBye();
         return;
@@ -87,16 +80,6 @@ public abstract class ApplicationController
     public void println(Object arg) {
         System.out.println(arg);
         // make life easier by simple saying print instead of System.out.println
-    }
-
-    public boolean isInteger(String text) {
-        try{
-            int num = Integer.parseInt(text);
-            return true;
-        } catch (NumberFormatException e) {
-            return false;
-        }
-        // this method is copied from https://stackoverflow.com/a/5439535
     }
 
     public void goodBye() {
